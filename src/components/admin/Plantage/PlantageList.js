@@ -5,6 +5,8 @@ import Header from '../../../layout/admin/Header';
 import SideNave from '../../../layout/admin/SideNave';
 
 const Plantages = () => {
+  const isAdmin = localStorage.getItem('isAdmin') === '1';
+
   const [plantages, setPlantages] = useState([]);
   const [showAddPlantage, setShowAddPlantage] = useState(false);
   const [showEditPlantage, setShowEditPlantage] = useState(false);
@@ -73,7 +75,9 @@ const Plantages = () => {
             <th>ID</th>
             <th>Parcelle ID</th>
             <th>Plante ID</th>
+            {isAdmin &&
             <th>Actions</th>
+}
           </tr>
         </thead>
         <tbody>
@@ -82,6 +86,7 @@ const Plantages = () => {
               <td>{plantage.id}</td>
               <td>{plantage.parcelle_id}</td>
               <td>{plantage.plante_id}</td>
+              {isAdmin &&
               <td>
                 <Button
                   variant="info"
@@ -102,16 +107,16 @@ const Plantages = () => {
                 >
                   Supprimer
                 </Button>
-              </td>
+              </td>}
             </tr>
           ))}
         </tbody>
       </Table>
-
+{isAdmin && 
       <Button variant="primary" onClick={() => setShowAddPlantage(true)}>
         Ajouter un Plantage
       </Button>
-
+}
       {/* Add Plantage Modal */}
       <Modal show={showAddPlantage} onHide={() => setShowAddPlantage(false)} centered>
         <Modal.Header closeButton>

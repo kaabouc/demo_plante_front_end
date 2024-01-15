@@ -20,14 +20,13 @@ export default function home() {
                     <div class="row">
                       <div class="col-lg-12">
                         <h6>Welcome to page web </h6>
-                        <h3>Your Gateway to Database Administration Knowledge!</h3>
+                        <h3>Your Gateway to racine and   nature .</h3>
                         <p>
-                          At IRSICHATBOT, we specialize in delivering comprehensive information and guidance on all things related to database administration. Whether you're a seasoned professional or someone exploring the realm of databases, our platform is designed to be your go-to resource for valuable insights and support.
-                        </p>
+                        Explorez nos vastes champs, jardins luxuriants et serres écologiques. Découvrez les différentes variétés de plantes que nous cultivons et apprenez comment nous les soignons avec amour.</p>
                       </div>
                       <div class="col-lg-12">
                         <div class="border-first-button scroll-to-section">
-                          <Link to="/chatbot">Get Start</Link>
+                          <Link to="/registre">Get Start</Link>
                         </div>
                       </div>
                     </div>
@@ -58,10 +57,10 @@ export default function home() {
                   <div class="about-right-content">
                     <div class="section-heading">
                       <h6>About Us</h6>
-                      <h4> your dedicated platform for all things database administration.</h4>
+                      <h4> Plongez dans l'histoire de notre ferme.</h4>
                       <div class="line-dec"></div>
                     </div>
-                    <p>What sets IRSICHATBOT apart is its commitment to providing user-friendly, easily accessible information. Our chatbot interface ensures that you can quickly navigate through a wealth of database administration topics. From fundamental concepts to advanced techniques, our aim is to empower you with the knowledge needed to excel in managing databases efficiently.</p>
+                    <p>Plongez dans l'histoire de notre ferme, notre engagement envers l'agriculture durable, et notre passion pour les plantes qui inspire chaque jour notre travail.</p>
 
                   </div>
                 </div>
@@ -79,8 +78,8 @@ export default function home() {
           <div class="row">
             <div class="col-lg-12">
               <div class="section-heading fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
-                <h6>Get Your Free chatbot</h6>
-                <h4>Welcome to IRSICHATBOT, your dedicated platform for all things database administration.</h4>
+                <h6>Get Your Free information</h6>
+                <h4>esoin de plus d'informations ou envie de partager votre amour pour les plantes ? Contactez notre équipe passionnée.</h4>
                 <div class="line-dec"></div>
               </div>
             </div>

@@ -5,6 +5,8 @@ import Header from '../../../layout/admin/Header';
 import SideNave from '../../../layout/admin/SideNave';
 
 const Userse = () => {
+    const isAdmin = localStorage.getItem('isAdmin') === '1';
+
     const [users, setUsers] = useState([]);
     const [showAddUser, setShowAddUser] = useState(false);
     const [showEditUser, setShowEditUser] = useState(false);
@@ -82,7 +84,9 @@ const Userse = () => {
                         <th>Prenom</th>
                         <th>Role</th>
                         <th>Email</th>
+                        {isAdmin &&
                         <th>Actions</th>
+}
                     </tr>
                 </thead>
                 <tbody>
@@ -93,6 +97,7 @@ const Userse = () => {
                             <td>{user.prenom}</td>
                             <td>{user.role === 1 ? 'Admin' : 'User'}</td>
                             <td>{user.email}</td>
+                            {isAdmin && 
                             <td>
                                 <Button
                                     variant="info"
@@ -114,15 +119,18 @@ const Userse = () => {
                                     Supprimer
                                 </Button>
                             </td>
+}
                         </tr>
                     ))}
                 </tbody>
             </Table>
+{
+    isAdmin && 
 
             <Button variant="primary" onClick={() => setShowAddUser(true)}>
                 Ajouter un Utilisateur
             </Button>
-
+}
             {/* Add User Modal */}
             <Modal show={showAddUser} onHide={() => setShowAddUser(false)} centered>
                 <Modal.Header closeButton>

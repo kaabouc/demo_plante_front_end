@@ -20,12 +20,11 @@ export default function service() {
                   <div class="col-lg-12">
                     <h6> IRSI Chatbot</h6>
                     <h2> Nos Services</h2>
-                    <p>Le chatbot prend en charge la réception simultanée de messages par la voix et le texte. Les utilisateurs peuvent
-                       alterner entre ces deux modes de communication sans interruption, offrant une expérience conversationnelle fluide.</p>
+                    <p>Whether you have a question, want to collaborate, or simply share your thoughts, we'd love to hear from you. Reach out to us [provide contact information or a link to a contact form].</p>
                   </div>
                   <div class="col-lg-12">
                     <div class="border-first-button scroll-to-section">
-                      <Link to="/chatbot">Get Start</Link>
+                      <Link to="/registre">Get Start</Link>
                     </div>
                   </div>
                 </div>
@@ -43,20 +42,31 @@ export default function service() {
     
   </div>
 
-  <div class="container mt-5">
-  <h1 className="mb-4">more services</h1>
-      <p> Envoi de Messages :
-
-Par la Voix : Les utilisateurs ont désormais la possibilité de poser des questions par la voix. En utilisant la reconnaissance vocale, ils peuvent simplement prononcer leurs questions, et le chatbot les interprétera.
-Par le Texte : Les utilisateurs peuvent également poser des questions en utilisant le champ de saisie de texte. Cette approche offre une flexibilité totale, permettant aux utilisateurs de choisir la méthode qui leur convient le mieux.</p>
-      <p>
-L'application a récemment évolué pour permettre l'envoi de messages par la voix ou le texte, offrant une flexibilité d'interaction. Cependant, la fonctionnalité de stockage des messages dans la base de données est en cours de développement pour garantir une préservation sécurisée des échanges. Nous travaillons activement sur cette amélioration pour assurer une expérience utilisateur complète, tout en prenant en charge la réception simultanée de messages vocaux et textuels, notamment en français, pour une communication plus fluide et personnalisée.
+  <div >
+    <h1 class="display-7">Welcome to ensa project  - Your Gateway to ferme and plant  Knowledge!</h1>
+    <p class="lead">Welcome to the heart of ENSA ferme. We are more than just a ENSA ferme; we are a community driven by passion and purpose.</p>
 
 
+    <p>At [Your Organization's Name], we are on a mission to [state your mission or objective]. Our values of [list a few core values] guide us in every decision we make and define the essence of who we are.</p>
+
+  
+    <ul>
+      <li> guide us in every decision .</li>
+      <li>we make and define the essence of who we are</li>
+      <li>we make and define the essence of who we are</li>
+      <li>Performance Tuning Strategies</li>
+
+      <li>to make a difference.</li>
+    </ul>
+
+ 
+    <p>Feel free to tailor this template to fit the specific details and character of your organization. Include relevant images, links, or additional sections that showcase what makes your organization unique.</p>
 
 
-</p>
-</div>
+
+  
+    <p class="lead">Welcome to the heart of ENSA ferme</p>
+  </div>
  <Footer/>
   </div>
  

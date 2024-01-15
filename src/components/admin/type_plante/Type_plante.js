@@ -5,6 +5,8 @@ import Header from '../../../layout/admin/Header';
 import SideNave from '../../../layout/admin/SideNave';
 
 const TypePlantes = () => {
+    const isAdmin = localStorage.getItem('isAdmin') === '1';
+
     const [typePlantes, setTypePlantes] = useState([]);
     const [showAddTypePlante, setShowAddTypePlante] = useState(false);
     const [showEditTypePlante, setShowEditTypePlante] = useState(false);
@@ -75,7 +77,9 @@ const TypePlantes = () => {
                                         <th>Température</th>
                                         <th>Humidité Maximale</th>
                                         <th>Humidité Minimale</th>
+                                        { isAdmin && 
                                         <th>Actions</th>
+}
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -86,6 +90,7 @@ const TypePlantes = () => {
                                             <td>{typePlante.temperature}</td>
                                             <td>{typePlante.humidite_max}</td>
                                             <td>{typePlante.humidite_min}</td>
+                                            {isAdmin &&
                                             <td>
                                                 <Button
                                                     variant="info"
@@ -112,15 +117,16 @@ const TypePlantes = () => {
                                                     Supprimer
                                                 </Button>
                                             </td>
+}
                                         </tr>
                                     ))}
                                 </tbody>
                             </Table>
-
+{ isAdmin && 
                             <Button variant="primary" onClick={() => setShowAddTypePlante(true)}>
                                 Ajouter un Type de Plante
                             </Button>
-
+}
                             {/* Add Type Plante Modal */}
                             <Modal show={showAddTypePlante} onHide={() => setShowAddTypePlante(false)} centered>
                                 <Modal.Header closeButton>

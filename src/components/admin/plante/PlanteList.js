@@ -5,6 +5,8 @@ import Header from '../../../layout/admin/Header';
 import SideNave from '../../../layout/admin/SideNave';
 
 const Plantes = () => {
+    const isAdmin = localStorage.getItem('isAdmin') === '1';
+
     const [plantes, setPlantes] = useState([]);
     const [typePlantes, setTypePlantes] = useState([]);
     const [showAddPlante, setShowAddPlante] = useState(false);
@@ -96,7 +98,9 @@ const Plantes = () => {
                                         <th>Racine</th>
                                         <th>Libellé</th>
                                         <th>Type de Plante</th>
+                                        {isAdmin && 
                                         <th>Actions</th>
+}
                                     </tr>
                                 </thead>
 
@@ -108,6 +112,7 @@ const Plantes = () => {
                                             <td>{plante.racine}</td>
                                             <td>{plante.libelle}</td>
                                             <td>{plante.type_plante?.libelle}</td>
+                                            {isAdmin &&
                                             <td>
                                                 <Button
                                                     variant="info"
@@ -134,13 +139,16 @@ const Plantes = () => {
                                                     Supprimer
                                                 </Button>
                                             </td>
+}
                                         </tr>
                                     ))}
                                 </tbody>
                             </Table>
+                            {isAdmin &&
                             <Button variant="primary" onClick={() => setShowAddPlante(true)}>
                                 Ajouter un Type de Plante
                             </Button>
+}
                             <Modal show={showAddPlante} onHide={() => setShowAddPlante(false)} centered>
                                 <Modal.Header closeButton>
                                     <Modal.Title>Ajouter une Plante</Modal.Title>

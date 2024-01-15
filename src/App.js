@@ -41,10 +41,11 @@ function App() {
            { isAdmin && (
             <>
           <Route path="/dashboard" element={<Dashboard/>} />
-          <Route path="/user" element={<Userse/>} />
+      
           </>
            )
            }
+               <Route path="/user" element={<Userse/>} />
           
 
           <Route path="/ferme" element={<Farms/>} />

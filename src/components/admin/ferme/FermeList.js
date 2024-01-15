@@ -5,6 +5,8 @@ import Header from '../../../layout/admin/Header';
 import SideNave from '../../../layout/admin/SideNave';
 
 const Farms = () => {
+  const isAdmin = localStorage.getItem('isAdmin') === '1';
+
   const [farms, setFarms] = useState([]);
   const [showAddFarm, setShowAddFarm] = useState(false);
   const [showEditFarm, setShowEditFarm] = useState(false);
@@ -71,7 +73,8 @@ const Farms = () => {
           <tr>
             <th>ID</th>
             <th>Libelle</th>
-            <th>Actions</th>
+            {isAdmin &&
+            <th>Actions</th> }
           </tr>
         </thead>
         <tbody>
@@ -79,7 +82,7 @@ const Farms = () => {
             <tr key={farm.id}>
               <td>{farm.id}</td>
               <td>{farm.libelle}</td>
-              <td>
+             {isAdmin && <td>
                 <Button
                   variant="info"
                   onClick={() => {
@@ -99,15 +102,18 @@ const Farms = () => {
                 >
                   Supprimer
                 </Button>
+
               </td>
+}
             </tr>
           ))}
         </tbody>
       </Table>
-
+{isAdmin &&
       <Button variant="primary" onClick={() => setShowAddFarm(true)}>
         Ajouter une Ferme
       </Button>
+}
 
       {/* Add Farm Modal */}
       <Modal show={showAddFarm} onHide={() => setShowAddFarm(false)} centered>

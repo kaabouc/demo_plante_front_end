@@ -5,6 +5,8 @@ import Header from '../../../layout/admin/Header';
 import SideNave from '../../../layout/admin/SideNave';
 
 const Parcelles = () => {
+  const isAdmin = localStorage.getItem('isAdmin') === '1';
+
   const [parcelles, setParcelles] = useState([]);
   const [showAddParcelle, setShowAddParcelle] = useState(false);
   const [showEditParcelle, setShowEditParcelle] = useState(false);
@@ -72,7 +74,8 @@ const Parcelles = () => {
           <tr>
             <th>ID</th>
             <th>Libelle</th>
-            <th>Actions</th>
+            {isAdmin &&
+            <th>Actions</th>}
           </tr>
         </thead>
         <tbody>
@@ -80,6 +83,7 @@ const Parcelles = () => {
             <tr key={parcelle.id}>
               <td>{parcelle.id}</td>
               <td>{parcelle.libelle}</td>
+              {isAdmin && 
               <td>
                 <Button
                   variant="info"
@@ -100,15 +104,17 @@ const Parcelles = () => {
                 >
                   Supprimer
                 </Button>
-              </td>
+              
+              </td> }
             </tr>
           ))}
         </tbody>
       </Table>
-
+{isAdmin &&
       <Button variant="primary" onClick={() => setShowAddParcelle(true)}>
         Ajouter une Parcelle
       </Button>
+}
 
       {/* Add Parcelle Modal */}
       <Modal show={showAddParcelle} onHide={() => setShowAddParcelle(false)} centered>
